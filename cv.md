@@ -59,3 +59,13 @@ I like learning.
 
 * 2019-2020 Верстальщик - кроссбраузерная, адаптивная верстка
 * 2020 - настоящее время - frontend разрабтчик. Занимаюсь интерфейсами
+
+## Education
+
+* 2018-2019 HTML Academy - Frontend developer
+* 2019-2020 Hexlet - Frontend developer
+* 2020-2021 Hexlet - Backend developer
+
+## English
+
+I can read documentaton without vocabulary. Can speak and understand sipmle sentences.
