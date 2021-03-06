@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Gorushkin Artyom</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#skills">My Skills</a>
+          </li>
+          <li>
+            <a href="#experience">My Experience</a>
+          </li>
+          <li>
+            <a href="#education">My Education</a>
+          </li>
+          <li>
+            <a href="#code-sample">Code Sample</a>
+          </li>
+          <li>
+            <a href="#english">My English level</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <section id="about" class="about">
+        <h1>Artyom Gorushkin</h1>
+        <img src="img/avatar.jpeg" alt="">
+        <h2>About Me</h2>
+        <p>
+          My name is Artyom Gorushklin. I like learning. At my previous work i was an accountant. It was very boring.
+          Somewhere in the internet i I found out about MOOC? I found python course, then learnt about HTML Academy.
+          I had understand that it is was what i was looking for.
+        </p>
+        <ul class="about__contacts">
+          <li><a href="https://github.com/gorushkin">GtiHub</a> </li>
+          <li><a href="https://www.linkedin.com/in/gorushkin/">LinkedIn</a></li>
+          <li><a href="http://t.me/artyomgorushkin">Telegram</a></li>
+        </ul>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <ul class="portfolio__list">
+          <li class="portfolio__item">
+            <h3 class="portfolio__item-title">
+              Chat
+            </h3>
+            <div class="portfolio__links">
+              <a href="https://github.com/gorushkin/frontend-project-lvl4" class="portfolio__link">GitHub</a>
+              <a href="https://polar-thicket-77600.herokuapp.com/" class="portfolio__link">web-project</a>
+            </div>
+          </li>
+          <li class="portfolio__item">
+            <h3 class="portfolio__item-title">
+              Task Manager
+            </h3>
+            <div class="portfolio__links">
+              <a href="https://github.com/gorushkin/taskmanager" class="portfolio__link">GitHub</a>
+              <a href="https://taskmanager-gav.herokuapp.com" class="portfolio__link">web-project</a>
+            </div>
+          </li>
+          <li class="portfolio__item">
+            <h3 class="portfolio__item-title">
+              Veles
+            </h3>
+            <div class="portfolio__links">
+              <a href="https://github.com/gorushkin/veles" class="portfolio__link">GitHub</a>
+              <a href="https://gorushkin.github.io/veles/" class="portfolio__link">web-project</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <ul class="skills__list">
+          <li>HTML5, CSS3, SCSS</li>
+          <li>BEM</li>
+          <li>JavaScript(ES6+)</li>
+          <li>React, React (hooks)</li>
+          <li>Redux, Redux Toolkit, Forms</li>
+          <li>Express</li>
+          <li>Fastify</li>
+          <li>TDD, JEST</li>
+          <li>Git, Github, Github Action</li>
+          <li>Babel, Webpack, Gulp</li>
+          <li>Node.JS</li>
+          <li>Figma, Photoshop, Avocode</li>
+        </ul>
+      </section>
+
+      <section id="experience" class="experience">
+        <h2>My Experience</h2>
+        <ul class="experience__list">
+          <li>
+            <span>2019-2020</span> html coder
+          </li>
+          <li>
+            <span>2020-2021</span> frontend developer
+          </li>
+        </ul>
+      </section>
+
+      <section id="education" class="education">
+        <h2>My Education</h2>
+        <ul class="education__list">
+          <li class="education__item">
+            2018-2019 HTML Academy - Frontend developer
+          </li>
+          <li class="education__item">
+            2019-2020 Hexlet - Frontend developer
+          </li>
+          <li class="education__item">
+            2020-2021 Hexlet - Backend developer
+          </li>
+        </ul>
+      </section>
+
+      <section id="code-sample" class="code-sample">
+        <h2>Code Sample</h2>
+        <pre>
+          <code>
+            .get(
+              '/tasks/:id/edit',
+              { name: 'taskEdit', preValidation: app.authenticate },
+              async (req, reply) => {
+                const [task, users, statuses, labels] = await Promise.all([
+                  app.objection.models.task.query().findById(req.params.id).withGraphJoined('labels'),
+                  app.objection.models.user.query(),
+                  app.objection.models.status.query(),
+                  app.objection.models.label.query(),
+                ]);
+                reply.render('tasks/edit', {
+                  task,
+                  users,
+                  statuses,
+                  labels,
+                });
+                return reply;
+              },
+            )
+          </code>
+        </pre>
+      </section>
+
+      <section id="english" class="english">
+        <h2>My English Level</h2>
+        <p>I can read documentaton without vocabulary. Can speak and understand sipmle sentences.</p>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
